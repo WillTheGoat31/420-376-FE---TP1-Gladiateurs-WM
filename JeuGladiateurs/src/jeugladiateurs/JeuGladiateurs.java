@@ -57,20 +57,7 @@ public class JeuGladiateurs {
     System.out.println("");
     
 
-    //CODE TEMPORAIRE
-    
-    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
-    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
-    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
-    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
-    
-    //System.out.println();
-    
-    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
-    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
-    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
-    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
-        
+   
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
