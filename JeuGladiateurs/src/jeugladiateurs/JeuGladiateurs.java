@@ -1,5 +1,6 @@
 package jeugladiateurs;
 
+
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
@@ -39,13 +40,13 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Affichage prÃ©-combat">
+    // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
     
     
     Bob.afficherInfosPersonnage();
     System.out.println("");
     Igor.afficherInfosPersonnage();
-    // TODO : Afficher le message du dÃ©but du combat
+    // TODO : Afficher le message du début du combat
     // </editor-fold>
     System.out.println("");
     
@@ -56,19 +57,26 @@ public class JeuGladiateurs {
     System.out.println("");
     
 
-    tour.afficheTour();
-    tour.augmenteTour();
-    tour.afficheTour();
-    tour.augmenteTour();
-    tour.augmenteTour();
-    tour.afficheTour();
+    //CODE TEMPORAIRE
+    
+    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
+    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
+    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
+    //System.out.println("Attaque personnage #1 = " + Bob.attaqueCalcul());
+    
+    //System.out.println();
+    
+    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
+    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
+    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
+    //System.out.println("Attaque personnage #2 = " + Igor.attaqueCalcul());
         
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="MÃ©canique de combat">
-    // TODO : La boucle contenant les Ã©tapes du combat
-    // TODO : AprÃ¨s la boucle, afficher le rÃ©sultat du combat
+    // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
+    // TODO : La boucle contenant les étapes du combat
+    // TODO : Après la boucle, afficher le résultat du combat
     // </editor-fold>
     }
 
