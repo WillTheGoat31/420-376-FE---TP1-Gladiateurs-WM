@@ -16,6 +16,21 @@ public class JeuGladiateurs {
     AffichageEcran affichage = new AffichageEcran();
     Personnage Bob = new Personnage();
     Personnage Igor = new Personnage();
+    
+    
+    //BOB
+    Bob.setNom("Bob le malchanceux");
+    Bob.setPointsDeVie(70);
+    Bob.setValeurMaxAttaque(15);
+    Bob.setValeurDefence(15);
+    Bob.setInitiative(15);
+    
+    //IGOR
+    Igor.setNom("Igor l'empaleur");
+    Igor.setPointsDeVie(100);
+    Igor.setValeurMaxAttaque(25);
+    Igor.setValeurDefence(5);
+    Igor.setInitiative(30);
     // </editor-fold>
 
     // **************************************************************************
