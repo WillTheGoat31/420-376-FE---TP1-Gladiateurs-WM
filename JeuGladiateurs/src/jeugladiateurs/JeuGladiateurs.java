@@ -34,18 +34,35 @@ public class JeuGladiateurs {
     Igor.setInitiative(30);
     // </editor-fold>
 
-    Bob.afficherInfosPersonnage();
-    System.out.println("");
-    Igor.afficherInfosPersonnage();
+    
     
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
-    // TODO : Afficher les infos de chaque personnage
+    
+    
+    Bob.afficherInfosPersonnage();
+    System.out.println("");
+    Igor.afficherInfosPersonnage();
     // TODO : Afficher le message du début du combat
     // </editor-fold>
+    System.out.println("");
+    
+    System.out.println("<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>");
+    System.out.println("<<<<< Que le combat commence ! >>>>>");
+    System.out.println("<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>");
 
+    System.out.println("");
+    
+
+    tour.afficheTour();
+    tour.augmenteTour();
+    tour.afficheTour();
+    tour.augmenteTour();
+    tour.augmenteTour();
+    tour.afficheTour();
+        
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
