@@ -5,9 +5,14 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
-    // </editor-fold>
+    
+    
+    private String nom;
+    private int pointsDeVie;
+    private int valeurMaxAttaque;
+    private int valeurDefence;
+    private int initiative;
+    
 
     // **************************************************************************
     // **************************************************************************
@@ -18,19 +23,61 @@ public class Personnage {
     }
 
     public Personnage() {
-        // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
+        nom = "";
+        pointsDeVie = 0;
+        valeurMaxAttaque = 0;
+        valeurDefence = 0;
+        initiative = 0;
+
     }
     // </editor-fold>
 
+    
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
+    
+    //GETTER --------------------------------------
+    public int getInitiative() {
+        return initiative;
+    }
 
-    // **************************************************************************
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getValeurDefence() {
+        return valeurDefence;
+    }
+
+    public int getValeurMaxAttaque() {
+        return valeurMaxAttaque;
+    }
+    
+    
+    //SETTER -------------------------------
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+    }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+    public void setValeurDefence(int valeurDefence) {
+        this.valeurDefence = valeurDefence;
+    }
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
+    
+
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
