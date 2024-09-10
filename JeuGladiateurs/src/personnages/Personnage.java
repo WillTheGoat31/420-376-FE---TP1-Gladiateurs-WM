@@ -77,6 +77,25 @@ public class Personnage {
         this.valeurMaxAttaque = valeurMaxAttaque;
     }
     
+    
+    
+    //AFFICHER ---------------------------
+    public void afficherInfosPersonnage() {
+        System.out.println(nom);
+        System.out.println("    Attaque : " + valeurMaxAttaque);
+        System.out.println("    Défence : " + valeurDefence);
+        System.out.println("    Point de vie : " + pointsDeVie);
+        System.out.println("    Initiative : " + initiative);
+        
+        if (pointsDeVie <= 0) 
+        {
+           System.out.println("    Statut : " + "Mort");
+        }else System.out.println("    Statut : " + "Vivant");
+            
+        }
+    );
+        
+    }
 
     // **************************************************************************
     // **************************************************************************
