@@ -1,5 +1,7 @@
 package personnages;
 
+
+
 public class Personnage {
 
     // **************************************************************************
@@ -19,7 +21,7 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        // TODO : Constructeur AVEC param√®tres
+        // TODO : Constructeur AVEC paramËtres
     }
 
     public Personnage() {
@@ -62,13 +64,16 @@ public class Personnage {
     //SETTER -------------------------------
     public void setInitiative(int initiative) {
         this.initiative = initiative;
-        // TODO : Afficher les infos du personnage, tel que montr√© dans l'√©nonc√©
+        // TODO : Afficher les infos du personnage, tel que montrÈ dans l'ÈnoncÈ
     }
     public void setNom(String nom) {
         this.nom = nom;
     }
     public void setPointsDeVie(int pointsDeVie) {
         this.pointsDeVie = pointsDeVie;
+        if (this.pointsDeVie < 0) {
+            this.pointsDeVie = 0;
+        }
     }
     public void setValeurDefence(int valeurDefence) {
         this.valeurDefence = valeurDefence;
@@ -79,11 +84,15 @@ public class Personnage {
     
     
     
-    //AFFICHER ---------------------------
-    public void afficherInfosPersonnage() {
+
+    // **************************************************************************
+    // **************************************************************************
+   // <editor-fold defaultstate="collapsed" desc="MÈcanique de jeu">
+    public void afficherInfosPersonnage() 
+    {
         System.out.println(nom);
         System.out.println("    Attaque : " + valeurMaxAttaque);
-        System.out.println("    D√©fence : " + valeurDefence);
+        System.out.println("    DÈfence : " + valeurDefence);
         System.out.println("    Point de vie : " + pointsDeVie);
         System.out.println("    Initiative : " + initiative);
         
@@ -92,32 +101,43 @@ public class Personnage {
            System.out.println("    Statut : " + "Mort");
         }else System.out.println("    Statut : " + "Vivant");
             
-        }
-    );
         
-    }
-
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="M√©canique de jeu">
-    public void afficherInfosPersonnage() {
-        // TODO : Afficher les infos du personnage, tel que montr√© dans l'√©nonc√©
+        
     }
 
     private int attaqueCalcul() {
         // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouv√©e al√©atoirement et doit se situer entre Z√âRO et valeurMaxAttaque.
-        return 0;
+        // Cette valeur est trouvÈe alÈatoirement et doit se situer entre Z…RO et valeurMaxAttaque.
+        
+        int attaque = (int)(Math.random()*(valeurMaxAttaque-0));
+        
+        return attaque;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : R√©cup√©rer la valeur d'attaque pour ce tour, calculer les d√©gats,
-        //modifier les points de vie du personnage cible, afficher les d√©tails
-        // sur l'attaque, tel que montr√© dans l'√©nonc√©.
+        // TODO : RÈcupÈrer la valeur d'attaque pour ce tour, calculer les dÈgats,
+        //modifier les points de vie du personnage cible, afficher les dÈtails
+        // sur l'attaque, tel que montrÈ dans l'ÈnoncÈ.
+        
+         
+        int dommages = attaqueCalcul() - personnageCible.valeurDefence;
+        
+        
+        if (dommages < 0) {
+            dommages = 0;
+        }
+        
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+        
+        
+        // A REFAIRE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        System.out.println(personnageCible.nom + " attaque avec une puissance de : " + dommages);
+        System.out.println(personnageCible.nom + " a une dÈfence de : " + personnageCible.valeurDefence);
+        System.out.println("Les dommages sont donc de : " + (dommages - personnageCible.valeurDefence));
     }
 
     public void setNewInitiativeRandom() {
-        // TODO : Modifier de fa√ßon al√©atoire la valeur INI du personnage.
+        initiative = (int)(Math.random()*(100-0));
     }
     // </editor-fold>
 }
