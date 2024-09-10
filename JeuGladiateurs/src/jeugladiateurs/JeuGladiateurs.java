@@ -25,6 +25,7 @@ public class JeuGladiateurs {
     Bob.setValeurDefence(15);
     Bob.setInitiative(15);
     
+    
     //IGOR
     Igor.setNom("Igor l'empaleur");
     Igor.setPointsDeVie(100);
@@ -33,6 +34,10 @@ public class JeuGladiateurs {
     Igor.setInitiative(30);
     // </editor-fold>
 
+    Bob.afficherInfosPersonnage();
+    System.out.println("");
+    Igor.afficherInfosPersonnage();
+    
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
