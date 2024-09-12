@@ -54,23 +54,39 @@ public class JeuGladiateurs {
     
     affichage.afficherDebutCombat();
     System.out.println("");
+    
+    //BOUCLE COMMENCE
     tour.afficheTour();
     
         for (int i = 0; i < 100; i++) 
         {
             if (i == Bob.getInitiative())
             {
-                Bob.frapperPersonnage(Igor); 
+                Bob.frapperPersonnage(Igor);
+                System.out.println("");
+                Igor.frapperPersonnage(Bob);
+                break;
             }
             if(i == Igor.getInitiative())
             {
                 Igor.frapperPersonnage(Bob);
+                System.out.println("");
+                Bob.frapperPersonnage(Igor);
+                break;
             }
         }
         
+        affichage.afficherSeparateurInfosPerso();
+        
+        Bob.afficherInfosPersonnage();
+        System.out.println("");
+        Igor.afficherInfosPersonnage();
+        affichage.afficherSeparateurDeTour();
         
         
         
+        
+    //BOUCLE FINI 
         
     }
 
