@@ -36,27 +36,17 @@ public class JeuGladiateurs {
     // </editor-fold>
 
     
-    
+    //JEU------------------------------------------------------------------------
     // **************************************************************************
     // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
-    
    
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
-    
-    // TODO : Après la boucle, afficher le résultat du combat
-    // </editor-fold>
-    
     
     affichage.afficherDebutCombat();
     System.out.println("");
     
-    //BOUCLE COMMENCE
-    tour.afficheTour();
+    while(Bob.getPointsDeVie() > 0 || Igor.getPointsDeVie() > 0)
+    {
+        tour.afficheTour();
     
         for (int i = 0; i < 100; i++) 
         {
@@ -81,10 +71,14 @@ public class JeuGladiateurs {
         Bob.afficherInfosPersonnage();
         System.out.println("");
         Igor.afficherInfosPersonnage();
+        
+        Bob.setNewInitiativeRandom();
+        Igor.setNewInitiativeRandom();
+        tour.augmenteTour();
         affichage.afficherSeparateurDeTour();
-        
-        
-        
+    }
+    
+    
         
     //BOUCLE FINI 
         
