@@ -78,6 +78,7 @@ public class JeuGladiateurs {
         affichage.afficherSeparateurDeTour();
     }
     
+    affichage.afficheVictoire(Bob, Igor);
     
         
     //BOUCLE FINI 
