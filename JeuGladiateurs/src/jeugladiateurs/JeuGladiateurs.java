@@ -68,6 +68,17 @@ public class JeuGladiateurs {
     // TODO : La boucle contenant les étapes du combat
     // TODO : Après la boucle, afficher le résultat du combat
     // </editor-fold>
+    
+        for (int i = 0; i < 100; i++) {
+            if (i == Bob.getInitiative())
+            {
+                Bob.frapperPersonnage(Igor);
+            }
+            if(i == Igor.getInitiative())
+            {
+                Igor.frapperPersonnage(Bob);
+            }
+        }
     }
 
 }
