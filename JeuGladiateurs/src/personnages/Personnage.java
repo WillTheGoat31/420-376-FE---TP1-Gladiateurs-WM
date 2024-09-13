@@ -9,11 +9,11 @@ public class Personnage {
     // **************************************************************************
     
     
-    private String nom;
-    private int pointsDeVie;
-    private int valeurMaxAttaque;
-    private int valeurDefence;
-    private int initiative;
+    protected String nom;
+    protected int pointsDeVie;
+    protected int valeurMaxAttaque;
+    protected int valeurDefence;
+    protected int initiative;
     
 
     // **************************************************************************
@@ -21,7 +21,7 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        // TODO : Constructeur AVEC paramètres
+        
     }
 
     public Personnage() {
@@ -115,29 +115,30 @@ public class Personnage {
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
         
-         
         int dommages = attaqueCalcul() - personnageCible.valeurDefence;
+        int dommagesFinal = dommages - personnageCible.valeurDefence;
         
-        
-        if (dommages < 0) {
+         if (dommages < 0) {
             dommages = 0;
         }
+         if (dommagesFinal < 0) {
+            dommagesFinal = 0;
+        }
+         
         
-        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
         
+        //personnageCible.setPointsDeVie(pointsDeVie) = personnageCible.pointsDeVie - dommages;
+        personnageCible.setPointsDeVie(personnageCible.getPointsDeVie()-dommages);
         
         // A REFAIRE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        System.out.println(personnageCible.nom + " attaque avec une puissance de : " + dommages);
+        System.out.println(nom + " attaque avec une puissance de : " + dommages);
         System.out.println(personnageCible.nom + " a une défence de : " + personnageCible.valeurDefence);
-        System.out.println("Les dommages sont donc de : " + (dommages - personnageCible.valeurDefence));
+        System.out.println("Les dommages sont donc de : " + dommagesFinal);
     }
 
     public void setNewInitiativeRandom() {
         initiative = (int)(Math.random()*(100-0));
     }
-    // </editor-fold>
+    
 }
