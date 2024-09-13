@@ -4,6 +4,8 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.Mirmillon;
+import personnages.Retiaire;
 
 public class JeuGladiateurs {
 
@@ -15,8 +17,8 @@ public class JeuGladiateurs {
     // <editor-fold defaultstate="expanded" desc="Instanciation des objets">
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
-    Personnage Bob = new Personnage();
-    Personnage Igor = new Personnage();
+    Mirmillon Bob = new Mirmillon("Bob", 70, 15, 15, 15);
+    Retiaire Igor = new Retiaire("Igor", 100, 25, 5, 30);
     
     
     //BOB
@@ -44,7 +46,7 @@ public class JeuGladiateurs {
     affichage.afficherDebutCombat();
     System.out.println("");
     
-    while(Bob.getPointsDeVie() > 0 || Igor.getPointsDeVie() > 0)
+    while(Bob.getPointsDeVie() > 0 && Igor.getPointsDeVie() > 0)
     {
         tour.afficheTour();
     
@@ -52,6 +54,13 @@ public class JeuGladiateurs {
         {
             if (i == Bob.getInitiative())
             {
+                Bob.frapperPersonnage(Igor);
+                if (Igor.getPointsDeVie() <= 0) {
+                    System.out.println("");
+                    System.out.println("Bob a décapité Igor!");
+                    break;
+                }
+                
                 Bob.frapperPersonnage(Igor);
                 System.out.println("");
                 Igor.frapperPersonnage(Bob);
