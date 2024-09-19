@@ -141,4 +141,16 @@ public class Personnage {
         initiative = (int)(Math.random()*(100-0));
     }
     
+    public boolean estFouetter()
+    {
+        int chanceFouet = (int)(Math.random()*(100-0));
+        boolean estFouet = false;
+        
+        if (chanceFouet <= 10) {
+            estFouet = true;
+        }
+        
+        return estFouet;
+    }
+    
 }
