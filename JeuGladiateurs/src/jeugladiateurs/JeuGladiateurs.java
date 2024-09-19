@@ -27,6 +27,7 @@ public class JeuGladiateurs {
     Bob.setValeurMaxAttaque(15);
     Bob.setValeurDefence(15);
     Bob.setInitiative(15);
+    Bob.setClasse();
     
     
     //IGOR
@@ -35,6 +36,7 @@ public class JeuGladiateurs {
     Igor.setValeurMaxAttaque(25);
     Igor.setValeurDefence(5);
     Igor.setInitiative(30);
+    Igor.setClasse();
     // </editor-fold>
 
     
@@ -61,16 +63,30 @@ public class JeuGladiateurs {
                     break;
                 }
                 
+                System.out.println("");
                 Bob.frapperPersonnage(Igor);
+                    
                 System.out.println("");
                 Igor.frapperPersonnage(Bob);
                 break;
             }
+            
             if(i == Igor.getInitiative())
             {
-                Igor.frapperPersonnage(Bob);
+                System.out.println("Igor lance son fillet!");
                 System.out.println("");
-                Bob.frapperPersonnage(Igor);
+                if (Bob.estFouetter()) {
+                   System.out.println("Son filet attrape Bob le malchanceux et il l?empale sauvagement avec sa lance");
+                   
+                }
+                else
+                {
+                    Igor.frapperPersonnage(Bob);
+                    System.out.println("");
+                    Bob.frapperPersonnage(Igor);
+                }
+                
+                
                 break;
             }
         }
